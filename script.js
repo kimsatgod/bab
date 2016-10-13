@@ -192,7 +192,7 @@ function sendSubscriptionToServer(subscription) {
     console.log(registration_id);
 
     $.ajax({
-        url: '//localhost:3000/register/' + registration_id,
+        url: '//175.205.201.156:3000/register/' + registration_id,
         method: 'POST'
     }).then(function (msg) {
         if (msg.result === 'success') {
