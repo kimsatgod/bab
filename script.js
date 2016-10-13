@@ -41,27 +41,27 @@ function initialiseState() {
 
 
     // 서비스워커 등록
-    // navigator.serviceWorker
-    //     .register('service.js')
-    //     .then(function (reg) {
-    //         // console.log(reg);
-    //         return navigator.serviceWorker.ready;
-    //     })
-    //     .then(function (reg) {
-    //         // console.log('Service Worker is ready :^)', reg);
+    navigator.serviceWorker
+        .register('service.js')
+        .then(function (reg) {
+            // console.log(reg);
+            return navigator.serviceWorker.ready;
+        })
+        .then(function (reg) {
+            // console.log('Service Worker is ready :^)', reg);
 
-    //         // reg.pushManager
-    //         //     .subscribe({
-    //         //         userVisibleOnly: true
-    //         //     })
-    //         //     .then(function (sub) {
-    //         //         console.log('endpoint:', sub.endpoint);
-    //         //     });
-    //     })
-    //     .catch(function (error) {
-    //         console.log('Service Worker error :^(', error);
-    //         alert('서비스 워커 오류 발생!');
-    //     });
+            // reg.pushManager
+            //     .subscribe({
+            //         userVisibleOnly: true
+            //     })
+            //     .then(function (sub) {
+            //         console.log('endpoint:', sub.endpoint);
+            //     });
+        })
+        .catch(function (error) {
+            console.log('Service Worker error :^(', error);
+            alert('서비스 워커 오류 발생!');
+        });
 
 
 
