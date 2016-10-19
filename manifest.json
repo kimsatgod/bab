@@ -1,5 +1,5 @@
 {
-  "name": "청주 폴리텍 식단 알림 서비스",
+  "name": "식단 알림",
   "short_name": "밥뭐냐",
   "start_url": "/bab",
   "display": "standalone",

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>청주 폴리텍 식단 알림 서비스</title>
+	<title>식단 알림</title>
 	<link rel="manifest" href="./manifest.json">
 	<!--<link rel="stylesheet" href="style.css">-->
 
@@ -16,9 +16,14 @@
 		appId: "c40a3ea7-6eb1-4664-93bc-4f71581b3381",
 		safari_web_id : "web.onesignal.auto.4a2f472e-2de1-469e-8f55-0b3384f6ae6c",
 		subdomainName : "bab79",
-		autoRegister: false,
+		autoRegister: true,
 		notifyButton: {
 			enable: true /* Set to false to hide */
+		},
+		welcomeNotification: {
+			"title" : "구독 완료",
+			//"message" : "",
+			//"url" : ""
 		}
 		}]);
 	</script>
