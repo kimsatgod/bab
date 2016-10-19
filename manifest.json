@@ -1,4 +1,7 @@
 {
-    "name": "Push Notifications codelab",
-    "gcm_sender_id": "979880616190"
+  "name": "OneSignal Example",
+  "short_name": "OneSignalExample",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "482941778795"
 }

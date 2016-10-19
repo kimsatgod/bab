@@ -5,28 +5,29 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="manifest" href="manifest.json">
-	<link rel="stylesheet" href="style.css">
+	<title>청주 폴리텍 식단 알림 서비스</title>
+	<link rel="manifest" href="./manifest.json">
+	<!--<link rel="stylesheet" href="style.css">-->
+
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+	<script>
+		var OneSignal = window.OneSignal || [];
+		OneSignal.push(["init", {
+		appId: "c40a3ea7-6eb1-4664-93bc-4f71581b3381",
+		autoRegister: false,
+		notifyButton: {
+			enable: true /* Set to false to hide */
+		}
+		}]);
+	</script>
 </head>
 
 <body>
-	<!--https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web?hl=ko-->
-	<!--https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/?hl=ko-->
-	<!--https://serviceworke.rs/push-subscription-management_demo.html-->
 
-
-	<button id="btn">구독</button>
-
-	<div id="warning">
-		<div class="msg">
-			<h2>해당 브라우저는 푸시 알림 API를 지원하지 않습니다.</h2>
-		</div>
-		<div class="bg"></div>
-	</div>
+	ㅋㅋ
 
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="script.js"></script>
+	<!--<script src="script.js"></script>-->
 </body>
 
 </html>
