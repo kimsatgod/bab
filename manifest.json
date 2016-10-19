@@ -1,7 +1,7 @@
 {
   "name": "OneSignal Example",
   "short_name": "OneSignalExample",
-  "start_url": "./bab",
+  "start_url": "https://kimsatgod.github.io/bab",
   "display": "standalone",
   "gcm_sender_id": "482941778795"
 }
