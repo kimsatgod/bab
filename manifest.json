@@ -1,6 +1,6 @@
 {
-  "name": "OneSignal Example",
-  "short_name": "OneSignalExample",
+  "name": "청주 폴리텍 식단 알림 서비스",
+  "short_name": "밥뭐냐",
   "start_url": "/bab",
   "display": "standalone",
   "gcm_sender_id": "482941778795"
