@@ -126,7 +126,7 @@ OneSignal.push(function () {
                                     }]
                                 )
 
-                                location.reload()
+                                // location.reload()
 
                             })
                         } else {
