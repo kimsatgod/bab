@@ -111,7 +111,7 @@ OneSignal.push(function () {
                                 OneSignal.sendSelfNotification(
                                     "식단 알림 보는 방법",
                                     "* 글이 다 보이지 않으면 이 곳을 터치해서 아래로 드래그 해보세요.\n * 터치하면 한주일간 메뉴를 보실 수 있습니다.",
-                                    '', //url
+                                    'https://kimsatgod.github.io/bab/today', //url
                                     'https://kimsatgod.github.io/bab/notification_icon.jpg', // icon
                                     {}, // data hash
                                     [
@@ -119,7 +119,7 @@ OneSignal.push(function () {
                                             id: 'read-more-button',
                                             text: '오늘 식단 보기',
                                             icon: 'http://i.imgur.com/MIxJp1L.png',
-                                            url: ''
+                                            url: 'https://kimsatgod.github.io/bab/today'
                                         }
                                     ]
                                 )
