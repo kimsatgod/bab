@@ -1,0 +1,7 @@
+body > .container-fluid {
+    max-width: 500px;
+}
+
+#times, #subscribe, #modifyTags, #unsubscribe {
+    display: none;
+}

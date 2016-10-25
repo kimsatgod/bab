@@ -7,34 +7,71 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>식단 알림</title>
 	<link rel="manifest" href="./manifest.json">
-	<!--<link rel="stylesheet" href="style.css">-->
 
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-	<script>
-		var OneSignal = window.OneSignal || [];
-		OneSignal.push(["init", {
-		appId: "c40a3ea7-6eb1-4664-93bc-4f71581b3381",
-		safari_web_id : "web.onesignal.auto.4a2f472e-2de1-469e-8f55-0b3384f6ae6c",
-		subdomainName : "bab79",
-		autoRegister: true,
-		notifyButton: {
-			enable: true /* Set to false to hide */
-		},
-		welcomeNotification: {
-			"title" : "구독 완료",
-			//"message" : "",
-			//"url" : ""
-		}
-		}]);
-	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-	<h1>ㅇㅅㅇ</h1>
+	<div class="container-fluid text-center">
 
+		<div class="page-header">
+			<h1>청주 폴리텍 식단</h1>
+		</div>
+
+		<h3><span class="glyphicon glyphicon-bullhorn"></span> 알아두기</h3>
+
+		<div class="row">
+			<div class="col-xs-11">
+				<ul class="text-left text-justify">
+					<li>식단은 학교 홈페이지와 동일하나, 변경 사항 발생 시 반영이 안될 수도 있습니다.</li>
+					<li>지정 시간에 일괄 발송됩니다. (조식: 7:00, 중식: 11:00, 석식: 16:30)</li>
+					<li>
+						<mark>안드로이드 크롬, 파이어폭스 모바일만 지원합니다. (애플은 지원 불가)</mark>
+					</li>
+					<li>브라우저 데이터 삭제 시 고유ID가 변경되어 알림을 받을 수 없습니다. (재구독 해야 함)</li>
+					<li>구독중인데 푸시가 오지 않거나, 기타 이상 증상이 있을 경우 브라우저 캐시를 삭제하시길 바랍니다.</li>
+				</ul>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
+
+		<div id="times" class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+				<div style="margin-bottom:20px;"></div>
+				<label for="" class="checkbox-inline">
+					<input name="t" type="checkbox" value="1"> 조식
+				</label>
+				<label for="" class="checkbox-inline">
+					<input name="t" type="checkbox" value="2"> 중식
+				</label>
+				<label for="" class="checkbox-inline">
+					<input name="t" type="checkbox" value="3"> 석식
+				</label>
+				<div style="margin-bottom:20px;"></div>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10">
+				<button id="subscribe" class="btn btn-block btn-primary">구독하기</button>
+				<button id="modifyTags" class="btn btn-block btn-success">변경적용</button>
+				<button id="unsubscribe" class="btn btn-block btn-danger">구독해지</button>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
+
+	</div>
+
+
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-	<!--<script src="script.js"></script>-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>
