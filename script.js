@@ -24,9 +24,7 @@ OneSignal.push(["init", {
         showCredit: false
     },
     welcomeNotification: {
-        "title": "식단 알림",
-        "message": "이 곳을 터치해서 아래로 드래그 해보세요. 화면이 작아 한번에 메시지를 볼 수 없어도 이렇게 내려서 보시면 됩니다. 물론 터치하면 당일 식단표를 확인할 수 있습니다.",
-        //"url" : ""
+        disable: true
     },
     setDefaultNotificationUrl: '',
     setDefaultTitle: '식단 알림'
@@ -95,18 +93,28 @@ OneSignal.push(function () {
                             }
                         })
 
-                        OneSignal.on('subscriptionChange', function (isSubscribed) {
-                            if (isSubscribed) {
-                                console.info('구독 완료')
-                                OneSignal.sendTags(getTimes()).then(function (tagsSent) {
-                                    console.info('구독 시간대 설정 완료', times, tagsSent)
-                                })
-                                location.reload()
-                            } else {
-                                console.info('구독 해지')
-                            }
-                        })
                     }
+
+                    // 구독 상태 변경 이벤트
+                    OneSignal.on('subscriptionChange', function (isSubscribed) {
+                        if (isSubscribed) {
+                            console.info('구독 완료')
+                            OneSignal.sendTags(getTimes()).then(function (tagsSent) {
+                                console.info('구독 시간대 설정 완료', times, tagsSent)
+
+                                OneSignal.sendSelfNotification(
+                                    "식단 알림 보는 방법",
+                                    "이 곳을 터치해서 아래로 드래그 해보세요. 화면이 작아 한번에 메시지를 볼 수 없어도 이렇게 내려서 보시면 됩니다. 물론 터치하면 당일 식단표를 확인할 수 있습니다."
+                                )
+
+                                location.reload()
+
+                            })
+                        } else {
+                            console.info('구독 해지')
+                        }
+                    })
+
                 })
 
             }
